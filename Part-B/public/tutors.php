@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Our Tutors | Online Academy</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="dist/css/style.css">
+</head>
+
+<style>
+table, th, td {
+  border: 1px solid black;
+	border-collapse: collapse;
+	text-align: center;
+}
+</style>
+
+<body>
+
+<div class="header">
+	Online Academy <br>
+	BIS Design & Development Coursework - W1715755 | 2016075
+</div>
+
+<div class="row">
+	
+	<div class="column side">
+		<?php include 'navigation.html';?> 
+	</div>
+	
+	<div class="column middle">
+		<h1>Our Tutors</h1>
+		<?php
+		include('../private/initialise.php');
+		$all_tutors = Tutor::find_all();
+		
+		echo "<table style='width: 100%;'>";
+		echo "<tr bgcolor='yellowgreen'>";
+		echo "<th style='padding: 0.3rem'>ID</th>";
+		echo "<th style='padding: 0.3rem'>Name</th>";
+		echo "<th style='padding: 0.3rem'>Email</th>";
+		echo "<th style='padding: 0.3rem'>Phone Number</th>";
+		echo "<th style='padding: 0.3rem'>Qualifications</th>";
+		echo "<th style='padding: 0.3rem'>Subjects to Teach</th>";
+		echo "<th style='padding: 0.3rem'>Rate Per Hour</th>";
+		echo "<th style='padding: 0.3rem'></th>";
+		echo "</tr>";
+		foreach ($all_tutors as $obj) {
+			echo "<tr>";
+			echo "<td style='padding: 0.8rem'>".$obj->tutorId."</td>";
+			echo "<td style='padding: 0.8rem'>".$obj->name."</td>";
+			echo "<td style='padding: 0.8rem'>".$obj->email."</td>";
+			echo "<td style='padding: 0.8rem'>".$obj->phoneNumber."</td>";
+			echo "<td style='padding: 0.8rem'>".$obj->qualifications."</td>";
+			echo "<td style='padding: 0.8rem'>".$obj->subjectsToTeach."</td>";
+			echo "<td style='padding: 0.8rem'>".$obj->ratePerHour."</td>";
+			echo "<td style='padding: 0.8rem'><a href='' style='text-decoration: none;'>View</a></td>";
+			echo "</tr>";
+		}
+		echo "</table>";
+		?>
+	</div>
+
+	<div class="footer">
+		BIS Design & Development Module <br>
+		Coursework Submission
+	</div>
+	
+</div>
+
+</body>
+
+
+</html>
