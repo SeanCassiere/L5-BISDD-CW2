@@ -19,7 +19,7 @@ if ( isset($_GET['id']) ) {
 
 <div class="header">
 	Online Academy <br>
-	BIS Design & Development Coursework - W1715755 | 2016075
+	BIS Design & Development Coursework - W1715755 | 2016074
 </div>
 
 <div class="row">
@@ -73,7 +73,7 @@ if ( isset($_GET['id']) ) {
 
 	<div class="footer">
 		BIS Design & Development Module <br>
-		Coursework Submission - W1715755 | 2016075
+		Coursework Submission - W1715755 | 2016074
 	</div>
 	
 </div>
