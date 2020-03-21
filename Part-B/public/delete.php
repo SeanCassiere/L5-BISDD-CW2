@@ -29,7 +29,7 @@ if ( isset($_GET['id']) ) {
 	</div>
 	
 	<div class="column middle">
-    <h1>Delete Tutor</h1>
+    <h1>Delete a Tutor</h1>
     <?php
     if (isset($URL_tutorId)) {
 			/* IF Page Loads with GET REQUEST METHOD */

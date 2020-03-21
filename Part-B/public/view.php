@@ -9,7 +9,7 @@ if ( isset($_GET['id']) ) {
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>Our Tutors | Online Academy</title>
+<title>View Tutor | Online Academy</title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" type="text/css" href="dist/css/style.css">
@@ -29,7 +29,7 @@ if ( isset($_GET['id']) ) {
 	</div>
 	
 	<div class="column middle">
-		<h1>Our Tutors</h1>
+		<h1>View Tutor</h1>
 		<?php
     if (isset($URL_TutorId)) {
       $tutor_object = Tutor::find_by_id($URL_TutorId); // Finding the Tutor Details based on ID
