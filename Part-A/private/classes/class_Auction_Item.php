@@ -1,6 +1,7 @@
 <?php
 //Parent Class for ALL Auction Items
 class Auction_Item {
+  // + Attr
   public $id; // ID per Item
   public $seller; // Seller Name
   public $type; // Type of Item
@@ -8,13 +9,12 @@ class Auction_Item {
   public $askingPrice; //Item Asking Price
   public $closingDate; // Item Closing Date
   public $currentBid; // Current big on the Item
-
+  // # Attr
   protected $buyer_premium;
-  protected $seller_profit;
-  
-  protected static $seller_premium=10; // Constant
-
-  // Specialized construct method to require & assign attributes at initiation
+  // # Static Attr
+  protected static $seller_premium=10;
+  // + Methods
+  # Specialized construct method to require & assign attributes at initiation
   public function __construct($id, $seller, $type, $description, $askingPrice, $closingDate, $currentBid){
     $this->id = $id;
     $this->seller = $seller;
@@ -23,13 +23,12 @@ class Auction_Item {
     $this->askingPrice = $askingPrice;
     $this->closingDate = $closingDate;
     $this->currentBid = $currentBid;
-
+    // Calculates The Buyer Premium Value for the Item
     $this->buyer_premium = $this->askingPrice*0.1;
-    $this->seller_profit = $this->askingPrice - self::$seller_premium;
   }
 
-  public function selling_price() {
-    $total_price = $this->askingPrice+$this->buyer_premium;
+  public function selling_price() { // Selling Price and Info to User
+    $total_price = $this->askingPrice + $this->buyer_premium;
     echo "Product ID: ".$this->id."<br>";
     echo "Seller: ".$this->seller."<br>";
     echo "Asking Price: ".$this->askingPrice."<br>";
@@ -37,13 +36,13 @@ class Auction_Item {
     echo "Total Buyer's Price: ".$total_price."<br>";
   }
   
-  public function seller_earnings() {
-    $profit = $this->askingPrice-self::$seller_premium;
+  public function seller_earnings() { // Seller's Earnings
+    $profit = $this->askingPrice - self::$seller_premium;
     echo "Net Value Seller will Receive: ". $profit ."<br>";
   }
 
-  public function site_profit() {
-    $profit = $this->buyer_premium+self::$seller_premium;
+  public function site_profit() { // Auction Site Profits
+    $profit = $this->buyer_premium + self::$seller_premium;
     echo "Site Profit: ".$profit."<br>";
   }
 }
