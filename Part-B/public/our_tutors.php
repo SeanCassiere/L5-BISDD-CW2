@@ -1,3 +1,6 @@
+<?php
+include('../private/initialise.php');
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -23,7 +26,6 @@
 	<div class="column middle">
 		<h1>Our Tutors</h1>
 		<?php
-		include('../private/initialise.php');
 		$all_tutors = Tutor::find_all(); // Retrieving all Tutors from DB
 		
 		// Table Creation

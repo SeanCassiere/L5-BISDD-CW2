@@ -1,4 +1,5 @@
 <?php
+include('../private/initialise.php');
 if ( isset($_GET['id']) ) {
   if ( $_GET['id'] == '' ) { $URL_TutorId = NULL; } else { $URL_TutorId = $_GET['id']; }
 }
@@ -28,7 +29,6 @@ if ( isset($_GET['id']) ) {
 	<div class="column middle">
 		<h1>Our Tutors</h1>
 		<?php
-    include('../private/initialise.php');
     if (isset($URL_TutorId)) {
       $tutor_object = Tutor::find_by_id($URL_TutorId); // Finding the Tutor Details based on ID
       if ($tutor_object != NULL) {
