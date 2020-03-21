@@ -41,7 +41,9 @@ require_once('../private/initialise.php');
 			echo "<tr>";
 			echo "<td style='padding: 0.8rem'><a href='view.php?id=".$obj->id."'>".$obj->name."</a></td>";
 			echo "<td style='padding: 0.8rem'>".$obj->email."</td>";
-			echo "<td style='padding: 0.8rem'>".$obj->subjectsToTeach."</td>";
+			echo "<td style='padding: 0.8rem'>".$obj->subjectsToTeach;
+			echo "<a href='update_subject.php?id=".$obj->id."' style='float: right;'>[EDIT]</a>";
+			echo "</td>";
 			echo "<td style='padding: 0.8rem'><a href='delete.php?id=".$obj->id."'>Delete</a></td>";
 			echo "</tr>";
 		}

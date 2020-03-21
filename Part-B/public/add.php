@@ -53,7 +53,7 @@ require_once('../private/initialise.php');
 
       // Success Message
       if ($results) {
-        echo "<p>New Vehicle Added Successfully</p>";
+        echo "<h4>New Vehicle Added Successfully</h4>";
 
         echo "<table>";
         echo "<tr> <td class='left'><b> Tutor ID </b></td> <td style='padding: 0.2rem'>" . $tutor->id . "</td> </tr>";
