@@ -11,6 +11,7 @@ include('../private/initialise.php');
 </head>
 <style>
   td {padding: 0.5rem; text-align: right;}
+  td.left {font-weight: bold; background-color: yellowgreen;}
   td input, td textarea {width: 100%;}
 </style>
 <body>
@@ -75,32 +76,32 @@ include('../private/initialise.php');
       echo "<table>";
   
       echo "<tr>";
-      echo "<td><label for='name'>Name: </label></td>";
+      echo "<td class='left'><label for='name'>Name </label></td>";
       echo "<td><input type='text' name='name' id='name' placeholder='Eg: John Doe' required></td>";
       echo "</tr>";
   
       echo "<tr>";
-      echo "<td><label for='email'>Phone Number: </label></td>";
+      echo "<td class='left'><label for='email'>Phone Number </label></td>";
       echo "<td><input type='email' name='email' id='email' placeholder='Eg: john.doe@example.com' required></td>";
       echo "</tr>";
       
       echo "<tr>";
-      echo "<td><label for='phoneNumber'>Phone Number: </label></td>";
+      echo "<td class='left'><label for='phoneNumber'>Phone Number </label></td>";
       echo "<td><input type='text' name='phoneNumber' id='phoneNumber' placeholder='Eg: 411909' required></td>";
       echo "</tr>";
   
       echo "<tr>";
-      echo "<td><label for='qualifications'>Qualifications: </label></td>";
+      echo "<td class='left'><label for='qualifications'>Qualifications </label></td>";
       echo "<td><textarea name='qualifications' id='qualifications' placeholder='Eg: BSc Computer Science, BA Art' required></textarea></td>";
       echo "</tr>";
   
       echo "<tr>";
-      echo "<td><label for='subjectsToTeach'>Subjects to Teach: </label></td>";
+      echo "<td class='left'><label for='subjectsToTeach'>Subjects to Teach </label></td>";
       echo "<td><textarea name='subjectsToTeach' id='subjectsToTeach' placeholder='Eg: Programming Databases , History Sociology' required></textarea></td>";
       echo "</tr>";
   
       echo "<tr>";
-      echo "<td><label for='ratePerHour'>Rate Per Hour***: </label></td>";
+      echo "<td class='left'><label for='ratePerHour'>Rate Per Hour*** </label></td>";
       echo "<td><input type='number' name='ratePerHour' id='ratePerHour' placeholder='Eg: 45' required></td>";
       echo "</tr>";
   
