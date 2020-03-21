@@ -1,6 +1,5 @@
 <?php
 //Parent Class for ALL Auction Items
-
 class Auction_Item {
   public $id; // ID per Item
   public $seller; // Seller Name
@@ -21,22 +20,4 @@ class Auction_Item {
     $this->currentBid = $currentBid;
   }
 }
-
-// Subclass for Furniture Items
-class Furniture extends Auction_Item {
-  public $dimensions;
-}
-
-// Subclass for Book Items
-class Book extends Auction_Item {
-  public $author;
-  public $title;
-}
-
-// Subclass for Painting Items
-class Painting extends Auction_Item {
-  public $painter;
-  public $year;
-}
-
 ?>
