@@ -22,4 +22,4 @@
 * Present all tutors on the screen - `public/our_tutors.php`
 * Get full details for a specific tutor - `public/view.php`
 * Add, Delete, Edit - `public/add.php`, `public/delete.php`
-* Optimize code using `$database` class - `private/class_database.php`
+* Optimize code using `Database` class - `private/class_database.php`
