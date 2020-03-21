@@ -10,7 +10,7 @@ body {
 
 .header {
 	background-color: #f1f1f1;
-  background-image: url('../imgs/cars.png');
+  background-image: url('../images/cars.png');
   background-size: contain;
   background-repeat: no-repeat;
   background-position: right top;
