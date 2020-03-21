@@ -23,7 +23,7 @@ require_once('../private/initialise.php');
   ?>
   <h2>Case 1</h2>
   <?php
-  /* Task 3 - to call the methods for selling_price, seller_earning, $site_profit */
+  /* Case 1 */
   echo "<h4>\$furn_coffeeTable </h4><p class='push-left'>";
   $furn_coffeeTable->selling_price(); $furn_coffeeTable->seller_earnings(); $furn_coffeeTable->site_profit();
   echo "</p>";
@@ -47,6 +47,7 @@ require_once('../private/initialise.php');
   <hr>
   <h2>Case 2</h2>
   <?php
+  /* Case 2 */
   echo "<h4>\$paint_oilOnCanvas </h4>";
   echo "<p class='push-left'>"; $paint_oilOnCanvas->saleState(); echo "</p>";
   echo "<h4>\$paint_popArt </h4>";
@@ -57,7 +58,22 @@ require_once('../private/initialise.php');
   <hr>
   <h2>Case 3</h2>
   <?php
-
+  /* Case 3 */
+  echo "<h4>\$furn_coffeeTable </h4><p class='push-left'>";
+  $furn_coffeeTable->add_bid_history('25 January 2020', 20);
+  $furn_coffeeTable->add_bid_history('31 January 2020', 28);
+  $furn_coffeeTable->add_bid_history('01 February 2020', 35);
+  $furn_coffeeTable->add_bid_history('10 February 2020', 45);
+  $furn_coffeeTable->add_bid_history('12 February 2020', 60);
+  $furn_coffeeTable->view_bid_history(); // View Bid History for $furn_coffeeTable
+  echo "</p>";
+  
+  echo "<h4>\$paint_oilOnCanvas </h4><p class='push-left'>";
+  $paint_oilOnCanvas->add_bid_history('20 January 2020', 550);
+  $paint_oilOnCanvas->add_bid_history('27 January 2020', 600);
+  $paint_oilOnCanvas->add_bid_history('15 February 2020', 850);
+  $paint_oilOnCanvas->view_bid_history(); // View Bid History for $furn_coffeeTable
+  echo "</p>";
   ?>
 </body>
 </html>

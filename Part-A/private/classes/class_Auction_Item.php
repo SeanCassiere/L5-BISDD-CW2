@@ -11,6 +11,7 @@ class Auction_Item {
   public $currentBid; // Current big on the Item
   // # Attr
   protected $buyer_premium;
+  protected $bid_history = [];
   // # Static Attr
   protected static $seller_premium=10;
   // + Methods
@@ -44,6 +45,13 @@ class Auction_Item {
   public function site_profit() { // Auction Site Profits
     $profit = $this->buyer_premium + self::$seller_premium;
     echo "Site Profit: ".$profit."<br>";
+  }
+
+  public function add_bid_history($date, $bid) { $this->bid_history[$date] = $bid; }
+
+  public function view_bid_history() { 
+    echo "For item number ".$this->id.", the following bids are made: <br>";
+    foreach ($this->bid_history as $date=>$bid) { echo "Date: ". $date .", Bid: ". $bid . ".<br>"; }
   }
 }
 ?>
