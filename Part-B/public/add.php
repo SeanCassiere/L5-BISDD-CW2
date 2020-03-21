@@ -1,5 +1,6 @@
 <?php
-include('../private/initialise.php');
+// Application Loading
+require_once('../private/initialise.php');
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -27,6 +28,9 @@ include('../private/initialise.php');
 		<h1>Add a Tutor</h1>
     <?php
     if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+      /* IF Page Loads with POST REQUEST METHOD */
+
+      // Capture and Assign POST variables to Args Array
       $args = [];
       $args['name'] = $_POST['name'];
       $args['email'] = $_POST['email'];
@@ -35,10 +39,7 @@ include('../private/initialise.php');
       $args['subjectsToTeach'] = $_POST['subjectsToTeach'];
       $args['ratePerHour'] = $_POST['ratePerHour'];
 
-      /*echo "<pre>";
-      print_r($args);
-      echo "</pre>";*/
-
+      // Construct new Tutor Object
       $tutor = new Tutor;
       $tutor->name = $args['name'];
       $tutor->email = $args['email'];
@@ -47,8 +48,10 @@ include('../private/initialise.php');
       $tutor->subjectsToTeach = $args['subjectsToTeach'];
       $tutor->ratePerHour = $args['ratePerHour'];
 
+      // New Tutor Object to DB
       $results = $tutor->create();
 
+      // Success Message
       if ($results) {
         echo "<p>New Vehicle Added Successfully</p>";
 
@@ -62,10 +65,14 @@ include('../private/initialise.php');
         echo "<tr> <td class='left'><b> Rate Per Hour </b></td> <td style='padding: 0.2rem'>" . $tutor->ratePerHour . "</td> </tr>";
         echo "</table>";
       } else {
+        // If Error Occurs
         echo Database::$database->error;
       }
 
     } else {
+      /* IF Page Loads WITHOUT POST REQUEST METHOD */
+
+      // Form-Table Creation
       echo "<h4>Fill in ALL the following details.</h4>";
       echo "<h5>Items marked with *** are numerical fields.</h5>";
       echo "<form action='add.php' method='POST'>";

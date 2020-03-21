@@ -1,5 +1,7 @@
 <?php
-include('../private/initialise.php');
+// Application Loading
+require_once('../private/initialise.php');
+// URL Capture
 if ( isset($_GET['id']) ) {
   if ( $_GET['id'] == '' ) { $URL_TutorId = NULL; } else { $URL_TutorId = $_GET['id']; }
 }

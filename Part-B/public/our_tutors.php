@@ -1,5 +1,6 @@
 <?php
-include('../private/initialise.php');
+// Application Loading
+require_once('../private/initialise.php');
 ?>
 <!DOCTYPE html>
 <html lang="en">

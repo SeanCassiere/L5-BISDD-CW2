@@ -1,5 +1,7 @@
 <?php
+// Application Loading
 require_once('../private/initialise.php');
+// URL Capture
 if ( isset($_GET['id']) ) {
   if ( $_GET['id'] == '' ) { $URL_tutorId = NULL; } else { $URL_tutorId = $_GET['id']; }
 }
@@ -30,8 +32,10 @@ if ( isset($_GET['id']) ) {
     <h1>Delete Tutor</h1>
     <?php
     if (isset($URL_tutorId)) {
-      $deleted_tutor = Tutor::find_by_id($URL_tutorId);
-      $deleted_tutor->delete();
+			/* IF Page Loads with GET REQUEST METHOD */
+
+      $deleted_tutor = Tutor::find_by_id($URL_tutorId); // Capture Object
+      $deleted_tutor->delete(); // Delete Object from DB
 
       echo "<p> The following Tutor's record have been deleted. </p>";
 
@@ -45,7 +49,8 @@ if ( isset($_GET['id']) ) {
 			echo "<tr> <td class='left'> Rate Per Hour </td> <td>" . $deleted_tutor->ratePerHour . "</td> </tr>";
 			echo "</table>";
 
-    } else { // IF tutorId not provided
+    } else {
+			/* IF Page LOADS WITHOUT GET REQUEST METHOD */
       echo "<p>You have NOT provided a Tutor ID.</p>";
     }
     ?>
