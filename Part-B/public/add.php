@@ -105,7 +105,7 @@ require_once('../private/initialise.php');
   
       echo "<tr>";
       echo "<td class='left'><label for='ratePerHour'>Rate Per Hour*** </label></td>";
-      echo "<td><input type='number' name='ratePerHour' id='ratePerHour' placeholder='Eg: 45' required></td>";
+      echo "<td><input type='number' name='ratePerHour' id='ratePerHour' placeholder='Eg: 45' min='0' required></td>";
       echo "</tr>";
   
       echo "</table>";

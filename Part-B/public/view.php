@@ -38,27 +38,27 @@ if ( isset($_GET['id']) ) {
         echo "<table style='min-width: 50%;'>";
         
         echo "<tr>";
-        echo "<td bgcolor='yellowgreen' style='padding: 0.3rem; font-weight: bold;'>Name</td><td style='padding: 0.8rem'>".$tutor_object->name."</td>";
+        echo "<td bgcolor='#ffad9c' style='padding: 0.3rem; font-weight: bold;'>Name</td><td style='padding: 0.8rem'>".$tutor_object->name."</td>";
         echo "</tr>";
 
         echo "<tr>";
-        echo "<td bgcolor='yellowgreen' style='padding: 0.3rem; font-weight: bold;'>Email</td><td style='padding: 0.8rem'>".$tutor_object->email."</td>";
+        echo "<td bgcolor='#ffad9c' style='padding: 0.3rem; font-weight: bold;'>Email</td><td style='padding: 0.8rem'>".$tutor_object->email."</td>";
         echo "</tr>";
 
         echo "<tr>";
-        echo "<td bgcolor='yellowgreen' style='padding: 0.3rem; font-weight: bold;'>Phone Number</td><td style='padding: 0.8rem'>".$tutor_object->phoneNumber."</td>";
+        echo "<td bgcolor='#ffad9c' style='padding: 0.3rem; font-weight: bold;'>Phone Number</td><td style='padding: 0.8rem'>".$tutor_object->phoneNumber."</td>";
         echo "</tr>";
 
         echo "<tr>";
-        echo "<td bgcolor='yellowgreen' style='padding: 0.3rem; font-weight: bold;'>Qualifications</td><td style='padding: 0.8rem'>".$tutor_object->qualifications."</td>";
+        echo "<td bgcolor='#ffad9c' style='padding: 0.3rem; font-weight: bold;'>Qualifications</td><td style='padding: 0.8rem'>".$tutor_object->qualifications."</td>";
         echo "</tr>";
 
         echo "<tr>";
-        echo "<td bgcolor='yellowgreen' style='padding: 0.3rem; font-weight: bold;'>Subjects to Teach</td><td style='padding: 0.8rem'>".$tutor_object->subjectsToTeach."</td>";
+        echo "<td bgcolor='#ffad9c' style='padding: 0.3rem; font-weight: bold;'>Subjects to Teach</td><td style='padding: 0.8rem'>".$tutor_object->subjectsToTeach."</td>";
         echo "</tr>";
         
         echo "<tr>";
-        echo "<td bgcolor='yellowgreen' style='padding: 0.3rem; font-weight: bold;'>Rate Per Hour</td><td style='padding: 0.8rem'>".$tutor_object->ratePerHour."</td>";
+        echo "<td bgcolor='#ffad9c' style='padding: 0.3rem; font-weight: bold;'>Rate Per Hour</td><td style='padding: 0.8rem'>".$tutor_object->ratePerHour."</td>";
         echo "</tr>";
         
         echo "</table>";

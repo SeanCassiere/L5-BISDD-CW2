@@ -30,7 +30,7 @@ body {
 
 /* Left and right column */
 .column.side {
-	background-color: yellowgreen; width: 20%; height: 100%;
+	background-color: #ffad9c; width: 20%; height: 100%;
 }
 
 
@@ -59,7 +59,7 @@ body {
 /* Personal Styling */
 table, th, td { border: 1px solid black; border-collapse: collapse; text-align: center; }
 td {padding: 0.5rem;}
-td.left {font-weight: bold; background-color: yellowgreen;}
+td.left {font-weight: bold; background-color: #ffad9c;}
 td input, td textarea {width: 100%;}
 .column.side a {text-decoration: none; font-weight: 800; font-size: 0.9rem;}
 .column.side a, .column.side a:visited {color: #801100}
