@@ -17,7 +17,7 @@
 <div class="row">
 	
 	<div class="column side">
-		<?php include 'navigation.html';?> 
+		<?php include('dist/shared/navigation.html');?> 
 	</div>
 	
 	<div class="column middle">
@@ -29,7 +29,7 @@
 
 	<div class="footer">
 		BIS Design & Development Module <br>
-		Coursework Submission
+		Coursework Submission - W1715755 | 2016075
 	</div>
 	
 </div>
