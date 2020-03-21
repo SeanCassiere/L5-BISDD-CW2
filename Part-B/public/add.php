@@ -53,13 +53,13 @@ include('../private/initialise.php');
         echo "<p>New Vehicle Added Successfully</p>";
 
         echo "<table>";
-        echo "<tr> <td style='padding: 0.2rem' bgcolor='#ADD8E6'><b> Tutor ID </b></td> <td style='padding: 0.2rem'>" . $tutor->id . "</td> </tr>";
-        echo "<tr> <td style='padding: 0.2rem' bgcolor='#ADD8E6'><b> Name </b></td> <td style='padding: 0.2rem'>" . $tutor->name . "</td> </tr>";
-        echo "<tr> <td style='padding: 0.2rem' bgcolor='#ADD8E6'><b> Email </b></td> <td style='padding: 0.2rem'>" . $tutor->email . "</td> </tr>";
-        echo "<tr> <td style='padding: 0.2rem' bgcolor='#ADD8E6'><b> Phone Number </b></td> <td style='padding: 0.2rem'>" . $tutor->phoneNumber . "</td> </tr>";
-        echo "<tr> <td style='padding: 0.2rem' bgcolor='#ADD8E6'><b> Qualifications </b></td> <td style='padding: 0.2rem'>" . $tutor->qualifications . "</td> </tr>";
-        echo "<tr> <td style='padding: 0.2rem' bgcolor='#ADD8E6'><b> Subjects To Teach </b></td> <td style='padding: 0.2rem'>" . $tutor->subjectsToTeach . "</td> </tr>";
-        echo "<tr> <td style='padding: 0.2rem' bgcolor='#ADD8E6'><b> Rate Per Hour </b></td> <td style='padding: 0.2rem'>" . $tutor->ratePerHour . "</td> </tr>";
+        echo "<tr> <td class='left'><b> Tutor ID </b></td> <td style='padding: 0.2rem'>" . $tutor->id . "</td> </tr>";
+        echo "<tr> <td class='left'><b> Name </b></td> <td style='padding: 0.2rem'>" . $tutor->name . "</td> </tr>";
+        echo "<tr> <td class='left'><b> Email </b></td> <td style='padding: 0.2rem'>" . $tutor->email . "</td> </tr>";
+        echo "<tr> <td class='left'><b> Phone Number </b></td> <td style='padding: 0.2rem'>" . $tutor->phoneNumber . "</td> </tr>";
+        echo "<tr> <td class='left'><b> Qualifications </b></td> <td style='padding: 0.2rem'>" . $tutor->qualifications . "</td> </tr>";
+        echo "<tr> <td class='left'><b> Subjects To Teach </b></td> <td style='padding: 0.2rem'>" . $tutor->subjectsToTeach . "</td> </tr>";
+        echo "<tr> <td class='left'><b> Rate Per Hour </b></td> <td style='padding: 0.2rem'>" . $tutor->ratePerHour . "</td> </tr>";
         echo "</table>";
       } else {
         echo Database::$database->error;

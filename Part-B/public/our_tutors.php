@@ -31,9 +31,9 @@ include('../private/initialise.php');
 		// Table Creation
 		echo "<table style='width: 100%;'>";
 		echo "<tr bgcolor='yellowgreen'>";
-		echo "<th style='padding: 0.3rem'>Name</th>";
-		echo "<th style='padding: 0.3rem'>Email</th>";
-		echo "<th style='padding: 0.3rem'>Subjects to Teach</th>";
+		echo "<th style='padding: 0.5rem'>Name</th>";
+		echo "<th style='padding: 0.5rem'>Email</th>";
+		echo "<th style='padding: 0.5rem'>Subjects to Teach</th>";
 		echo "<th>&nbsp;</th>";
 		echo "</tr>";
 		foreach ($all_tutors as $obj) {
