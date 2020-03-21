@@ -59,21 +59,19 @@ require_once('../private/initialise.php');
   <h2>Case 3</h2>
   <?php
   /* Case 3 */
-  echo "<h4>\$furn_coffeeTable </h4><p class='push-left'>";
+  echo "<h4>\$furn_coffeeTable </h4>";
   $furn_coffeeTable->add_bid_history('25 January 2020', 20);
   $furn_coffeeTable->add_bid_history('31 January 2020', 28);
   $furn_coffeeTable->add_bid_history('01 February 2020', 35);
   $furn_coffeeTable->add_bid_history('10 February 2020', 45);
   $furn_coffeeTable->add_bid_history('12 February 2020', 60);
-  $furn_coffeeTable->view_bid_history(); // View Bid History for $furn_coffeeTable
-  echo "</p>";
+  echo "<p class='push-left'>"; $furn_coffeeTable->view_bid_history(); echo "</p>"; // View Bid History for $furn_coffeeTable 
   
-  echo "<h4>\$paint_oilOnCanvas </h4><p class='push-left'>";
+  echo "<h4>\$paint_oilOnCanvas </h4>";
   $paint_oilOnCanvas->add_bid_history('20 January 2020', 550);
   $paint_oilOnCanvas->add_bid_history('27 January 2020', 600);
   $paint_oilOnCanvas->add_bid_history('15 February 2020', 850);
-  $paint_oilOnCanvas->view_bid_history(); // View Bid History for $furn_coffeeTable
-  echo "</p>";
+  echo "<p class='push-left'>"; $paint_oilOnCanvas->view_bid_history(); echo "</p>"; // View Bid History for $furn_coffeeTable
   ?>
 </body>
 </html>

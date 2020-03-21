@@ -50,8 +50,10 @@ class Auction_Item {
   public function add_bid_history($date, $bid) { $this->bid_history[$date] = $bid; }
 
   public function view_bid_history() { 
-    echo "For item number ".$this->id.", the following bids are made: <br>";
-    foreach ($this->bid_history as $date=>$bid) { echo "Date: ". $date .", Bid: ". $bid . ".<br>"; }
+    if (!empty($this->bid_history)) {
+      echo "For item number ".$this->id.", the following bids are made: <br>";
+      foreach ($this->bid_history as $date=>$bid) { echo "Date: ". $date .", Bid: ". $bid . ".<br>"; }
+    } else { echo "Item number ".$this->id." has NO bid history set."; }
   }
 }
 ?>
