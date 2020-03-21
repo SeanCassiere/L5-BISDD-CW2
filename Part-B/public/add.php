@@ -9,11 +9,7 @@ include('../private/initialise.php');
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" type="text/css" href="dist/css/style.css">
 </head>
-<style>
-  td {padding: 0.5rem; text-align: right;}
-  td.left {font-weight: bold; background-color: yellowgreen;}
-  td input, td textarea {width: 100%;}
-</style>
+
 <body>
 
 <div class="header">

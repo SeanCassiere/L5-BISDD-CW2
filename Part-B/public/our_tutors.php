@@ -34,12 +34,14 @@ include('../private/initialise.php');
 		echo "<th style='padding: 0.3rem'>Name</th>";
 		echo "<th style='padding: 0.3rem'>Email</th>";
 		echo "<th style='padding: 0.3rem'>Subjects to Teach</th>";
+		echo "<th>&nbsp;</th>";
 		echo "</tr>";
 		foreach ($all_tutors as $obj) {
 			echo "<tr>";
 			echo "<td style='padding: 0.8rem'><a href='view.php?id=".$obj->id."' style='text-decoration: none;'>".$obj->name."</td>";
 			echo "<td style='padding: 0.8rem'>".$obj->email."</td>";
 			echo "<td style='padding: 0.8rem'>".$obj->subjectsToTeach."</td>";
+			echo "<td style='padding: 0.8rem'><a href='delete.php?id=".$obj->id."'>Delete</a></td>";
 			echo "</tr>";
 		}
 		echo "</table>";
