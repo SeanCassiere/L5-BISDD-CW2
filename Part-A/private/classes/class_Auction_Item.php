@@ -1,19 +1,44 @@
 <?php
 //Parent Class for ALL Auction Items
 class Auction_Item {
-  // + Attr
-  public $id; // ID per Item
-  public $seller; // Seller Name
-  public $type; // Type of Item
-  public $description; // Item Description
-  public $askingPrice; //Item Asking Price
-  public $closingDate; // Item Closing Date
-  public $currentBid; // Current big on the Item
+  // - Attr
+  private $id; // ID per Item
+  private $seller; // Seller Name
+  private $type; // Type of Item
+  private $description; // Item Description
+  private $askingPrice; //Item Asking Price
+  private $closingDate; // Item Closing Date
+  private $currentBid; // Current big on the Item
+  
   // # Attr
   protected $buyer_premium;
   protected $bid_history = [];
+  
   // # Static Attr
   protected static $seller_premium=10;
+
+  #Set-Get Pairs
+  public function set_id( $id ) { $this->id = $id; }
+  public function get_id() { return $this->id; }
+
+  public function set_seller( $seller ) { $this->seller = $seller; }
+  public function get_seller() { return $this->seller; }
+
+  public function set_type( $type ) { $this->type = $type; }
+  public function get_type() { return $this->type; }
+  
+  public function set_description( $description ) { $this->description = $description; }
+  public function get_description() { return $this->description; }
+  
+  public function set_askingPrice( $askingPrice ) { $this->askingPrice = $askingPrice; }
+  public function get_askingPrice() { return $this->askingPrice; }
+  
+  public function set_closingDate( $closingDate ) { $this->closingDate = $closingDate; }
+  public function get_closingDate() { return $this->closingDate; }
+  
+  public function set_currentBid( $currentBid ) { $this->currentBid = $currentBid; }
+  public function get_currentBid() { return $this->currentBid; }
+
   // + Methods
   # Specialized construct method to require & assign attributes at initiation
   public function __construct($id, $seller, $type, $description, $askingPrice, $closingDate, $currentBid){
