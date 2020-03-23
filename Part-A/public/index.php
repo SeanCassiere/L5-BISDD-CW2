@@ -15,7 +15,7 @@ require_once('../private/initialise.php');
   <?php
   /* Task 2 */
   $furn_coffeeTable = new Furniture("85 cm X 35 cm X 52", 1 , "Peter", "Furniture", "Coffee table", 85, "31/03/2020", 60);
-  $book_playDrama = new Book("William Shakespeare", "Macbeth", 1 , "Ann", "Book", "Play drama", 15, "31/03/2020", 7);
+  $book_playDrama = new Book("William Shakespeare", "Macbeth", 2 , "Ann", "Book", "Play drama", 15, "31/03/2020", 7);
   $paint_oilOnCanvas = new Painting("Hannah Fairfield",  1839, 1800, 3 , "Helen ", "Painting", "Oil on Canvas", 3000, "30/04/2020", 850);
   $paint_popArt = new Painting("Callypso",  2015, 85, 4 , "John ", "Painting", "Pop Art", 400, "30/04/2020", 420);
   $paint_spanishSchool = new Painting("Goya",  1800, 9500, 5 , "Wendy ", "Painting", "Spanish School", 15000, "30/04/2020", 10000);

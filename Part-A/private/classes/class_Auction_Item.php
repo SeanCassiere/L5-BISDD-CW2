@@ -55,21 +55,21 @@ class Auction_Item {
 
   public function selling_price() { // Selling Price and Info to User
     $total_price = $this->askingPrice + $this->buyer_premium;
-    echo "Product ID: ".$this->id."<br>";
-    echo "Seller: ".$this->seller."<br>";
-    echo "Asking Price: ".$this->askingPrice."<br>";
-    echo "Buyer Premium: ".$this->buyer_premium."<br>";
-    echo "Total Buyer's Price: ".$total_price."<br>";
+    echo "Product ID: <b>".$this->id."</b><br>";
+    echo "Seller: <b>".$this->seller."</b><br>";
+    echo "Asking Price: <b>&pound;".$this->askingPrice."</b><br>";
+    echo "Buyer Premium: <b>&pound;".$this->buyer_premium."</b><br>";
+    echo "Total Buyer's Price: <b>&pound;".$total_price."</b><br>";
   }
   
   public function seller_earnings() { // Seller's Earnings
     $profit = $this->askingPrice - self::$seller_premium;
-    echo "Net Value Seller will Receive: ". $profit ."<br>";
+    echo "Net Value Seller will Receive: <b>&pound;". $profit ."</b><br>";
   }
 
   public function site_profit() { // Auction Site Profits
     $profit = $this->buyer_premium + self::$seller_premium;
-    echo "Site Profit: ".$profit."<br>";
+    echo "Site Profit: <b>&pound;".$profit."</b><br>";
   }
 
   public function add_bid_history($date, $bid) { $this->bid_history[$date] = $bid; }
@@ -77,7 +77,7 @@ class Auction_Item {
   public function view_bid_history() { 
     if (!empty($this->bid_history)) {
       echo "For item number ".$this->id.", the following bids are made: <br>";
-      foreach ($this->bid_history as $date=>$bid) { echo "Date: ". $date .", Bid: ". $bid . ".<br>"; }
+      foreach ($this->bid_history as $date=>$bid) { echo "Date: ". $date .", Bid: <b>&pound;". $bid . ".</b><br>"; }
     } else { echo "Item number ".$this->id." has NO bid history set."; }
   }
 }
