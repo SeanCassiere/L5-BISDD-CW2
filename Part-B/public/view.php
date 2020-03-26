@@ -42,7 +42,7 @@ if ( isset($_GET['id']) ) {
         echo "</tr>";
 
         echo "<tr>";
-        echo "<td bgcolor='#ffad9c' style='padding: 0.3rem; font-weight: bold;'>Email</td><td style='padding: 0.8rem'>".$tutor_object->email."</td>";
+        echo "<td bgcolor='#ffad9c' style='padding: 0.3rem; font-weight: bold;'>Email</td><td style='padding: 0.8rem'><a href='mailto:".$tutor_object->email."' target='_blank'>".$tutor_object->email."</a></td>";
         echo "</tr>";
 
         echo "<tr>";
@@ -50,7 +50,7 @@ if ( isset($_GET['id']) ) {
         echo "</tr>";
 
         echo "<tr>";
-        echo "<td bgcolor='#ffad9c' style='padding: 0.3rem; font-weight: bold;'>Qualifications</td><td style='padding: 0.8rem'>".$tutor_object->qualifications."</td>";
+        echo "<td bgcolor='#ffad9c' style='padding: 0.3rem; font-weight: bold;'>Qualifications</td><td style='padding: 0.8rem'>".$tutor_object->qualifications."<a href='update_subject.php?id=".$tutor_object->id."' style='float: right;'>[EDIT]</a></td>";
         echo "</tr>";
 
         echo "<tr>";
@@ -59,6 +59,10 @@ if ( isset($_GET['id']) ) {
         
         echo "<tr>";
         echo "<td bgcolor='#ffad9c' style='padding: 0.3rem; font-weight: bold;'>Rate Per Hour</td><td style='padding: 0.8rem'>".$tutor_object->ratePerHour."</td>";
+        echo "</tr>";
+
+        echo "<tr>";
+        echo "<td <td colspan='2' style='padding: 0.8rem'><a href='delete.php?id=".$tutor_object->id."'>DELETE TUTOR</a></td>";
         echo "</tr>";
         
         echo "</table>";
