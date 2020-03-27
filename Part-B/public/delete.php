@@ -9,12 +9,11 @@ if ( isset($_GET['id']) ) {
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>Delete Tutor | Online Academy</title>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" type="text/css" href="dist/css/style.css">
+	<title>Delete Tutor | Online Academy</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="dist/css/style.css">
 </head>
-
 <body>
 
 <div class="header">
@@ -54,16 +53,14 @@ if ( isset($_GET['id']) ) {
       echo "<p>You have NOT provided a Tutor ID.</p>";
     }
     ?>
-  </div>
+	</div>
 
-<div class="footer">
-  BIS Design & Development Module <br>
-  Coursework Submission - W1715755 | 2016074
-</div>
+	<div class="footer">
+		BIS Design & Development Module <br>
+		Coursework Submission - W1715755 | 2016074
+	</div>
 
 </div>
 
 </body>
-
-
 </html>

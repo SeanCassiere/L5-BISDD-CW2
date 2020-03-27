@@ -11,7 +11,6 @@ class Auction_Item {
   private $currentBid; // Current big on the Item
   
   // # Attr
-  protected $buyer_premium;
   protected $bid_history = [];
   
   // # Static Attr
@@ -49,36 +48,20 @@ class Auction_Item {
     $this->askingPrice = $askingPrice;
     $this->closingDate = $closingDate;
     $this->currentBid = $currentBid;
-    // Calculates The Buyer Premium Value for the Item
-    $this->buyer_premium = $this->askingPrice*0.1;
   }
-
-  public function selling_price() { // Selling Price and Info to User
-    $total_price = $this->askingPrice + $this->buyer_premium;
-    echo "Product ID: <b>".$this->id."</b><br>";
-    echo "Seller: <b>".$this->seller."</b><br>";
-    echo "Asking Price: <b>&pound;".$this->askingPrice."</b><br>";
-    echo "Buyer Premium: <b>&pound;".$this->buyer_premium."</b><br>";
-    echo "Total Buyer's Price: <b>&pound;".$total_price."</b><br>";
-  }
-  
-  public function seller_earnings() { // Seller's Earnings
-    $profit = $this->askingPrice - self::$seller_premium;
-    echo "Net Value Seller will Receive: <b>&pound;". $profit ."</b><br>";
-  }
-
-  public function site_profit() { // Auction Site Profits
-    $profit = $this->buyer_premium + self::$seller_premium;
-    echo "Site Profit: <b>&pound;".$profit."</b><br>";
-  }
-
+  # Adding to the # Bid History attr 
   public function add_bid_history($date, $bid) { $this->bid_history[$date] = $bid; }
-
+  # Displaying # Bid History Attr in a presentable manner
   public function view_bid_history() { 
     if (!empty($this->bid_history)) {
       echo "For item number ".$this->id.", the following bids are made: <br>";
       foreach ($this->bid_history as $date=>$bid) { echo "Date: ". $date .", Bid: <b>&pound;". $bid . ".</b><br>"; }
     } else { echo "Item number ".$this->id." has NO bid history set."; }
   }
+  # Logic Based Calculations
+  public function calculate_buyer_premium() { return $this->askingPrice*0.1; }
+  public function calculate_selling_price() { return $this->askingPrice + $this->calculate_buyer_premium(); }
+  public function calculate_seller_earnings() { return $this->askingPrice - self::$seller_premium; }
+  public function calculate_site_profit() { return $this->calculate_buyer_premium() + self::$seller_premium; }
 }
 ?>

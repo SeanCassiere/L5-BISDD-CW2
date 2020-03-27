@@ -10,10 +10,10 @@ if ( isset($_GET['id']) ) {
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>Update Subject to Teach | Online Academy</title>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" type="text/css" href="dist/css/style.css">
+  <title>Update Subject to Teach | Online Academy</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="dist/css/style.css">
 </head>
 
 <body>
@@ -126,5 +126,4 @@ if ( isset($_GET['id']) ) {
 </div>
 
 </body>
-
 </html>
