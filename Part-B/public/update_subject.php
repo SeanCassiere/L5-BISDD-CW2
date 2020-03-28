@@ -44,9 +44,9 @@ if ( isset($_GET['id']) ) {
         $args = [];
         $args['subjectsToTeach'] = $_POST['subjectsToTeach'];
   
-        // Construct new Tutor Object
-        $tutor->subjectsToTeach = $args['subjectsToTeach'];
-
+        // Tutor Object Local Update
+        $tutor->merge_attributes($args);
+        
         // Tutor Object Update to DB
         $results = $tutor->update();
   
