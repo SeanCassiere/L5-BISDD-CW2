@@ -25,6 +25,12 @@ class Painting extends Auction_Item {
     $this->reservedPrice = $reserve;
   }
 
-  public function saleState() { if ( $this->reservedPrice < $this->get_currentBid() ) { echo "Painting '".$this->get_description()."' WILL be Sold."; } else { echo "Painting '".$this->get_description()."' will NOT be Sold."; } }  
+  public function saleState() {
+    if ( $this->reservedPrice < $this->get_currentBid() ) {
+      echo "Painting '".$this->get_description()."' WILL be Sold.";
+    } else { 
+      echo "Painting '".$this->get_description()."' will NOT be Sold.";
+    }
+  }  
 }
 ?>
