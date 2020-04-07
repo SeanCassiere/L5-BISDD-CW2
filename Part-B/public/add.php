@@ -83,7 +83,7 @@ require_once('../private/initialise.php');
       echo "</tr>";
   
       echo "<tr>";
-      echo "<td class='left'><label for='email'>Phone Number </label></td>";
+      echo "<td class='left'><label for='email'>Email </label></td>";
       echo "<td><input type='email' name='email' id='email' placeholder='Eg: john.doe@example.com' required></td>";
       echo "</tr>";
       

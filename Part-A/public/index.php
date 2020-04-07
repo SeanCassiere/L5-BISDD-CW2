@@ -20,7 +20,6 @@ require_once('../private/initialise.php');
   $paint_oilOnCanvas = new Painting("Hannah Fairfield",  1839, 1800, 3 , "Helen ", "Painting", "Oil on Canvas", 3000, "30/04/2020", 850);
   $paint_popArt = new Painting("Callypso",  2015, 85, 4 , "John ", "Painting", "Pop Art", 400, "30/04/2020", 420);
   $paint_spanishSchool = new Painting("Goya",  1800, 9500, 5 , "Wendy ", "Painting", "Spanish School", 15000, "30/04/2020", 10000);
-  //echo "<pre>"; print_r($furn_coffeeTable); echo "</pre>"; echo "<pre>"; print_r($book_playDrama); echo "</pre>"; echo "<pre>"; print_r($paint_oilOnCanvas); echo "</pre>"; echo "<pre>"; print_r($paint_popArt); echo "</pre>"; echo "<pre>"; print_r($paint_spanishSchool); echo "</pre>";
   ?>
 
   <!-- Case 1 -->
